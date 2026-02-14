@@ -1,0 +1,94 @@
+{
+  "regions": {
+    "northeast_us": {
+      "label": "Northeastern US",
+      "trees": [
+        { "name": "Sugar Maple", "scientific": "Acer saccharum", "fun_fact": "A single tree can produce 10-20 gallons of sap per season.", "emoji": "🍁" },
+        { "name": "Eastern White Pine", "scientific": "Pinus strobus", "fun_fact": "Can grow over 200 feet tall — the tallest conifer in eastern North America.", "emoji": "🌲" },
+        { "name": "Red Oak", "scientific": "Quercus rubra", "fun_fact": "Acorns take two years to mature and are a keystone food for wildlife.", "emoji": "🌳" },
+        { "name": "American Beech", "scientific": "Fagus grandifolia", "fun_fact": "Its smooth gray bark was historically used as a 'message board' by travelers.", "emoji": "🌳" },
+        { "name": "Paper Birch", "scientific": "Betula papyrifera", "fun_fact": "Indigenous peoples used its waterproof bark to build canoes.", "emoji": "🌿" }
+      ]
+    },
+    "southeast_us": {
+      "label": "Southeastern US",
+      "trees": [
+        { "name": "Live Oak", "scientific": "Quercus virginiana", "fun_fact": "Can live for over 500 years and spread wider than it is tall.", "emoji": "🌳" },
+        { "name": "Bald Cypress", "scientific": "Taxodium distichum", "fun_fact": "One of the few conifers that sheds its needles every fall.", "emoji": "🌲" },
+        { "name": "Southern Magnolia", "scientific": "Magnolia grandiflora", "fun_fact": "Its flowers can be up to 12 inches across and are among the oldest flowering plants.", "emoji": "🌸" },
+        { "name": "Loblolly Pine", "scientific": "Pinus taeda", "fun_fact": "The most commercially important timber species in the southeastern US.", "emoji": "🌲" },
+        { "name": "Sweetgum", "scientific": "Liquidambar styraciflua", "fun_fact": "Its spiky seed balls are nature's caltrops — painful to step on barefoot.", "emoji": "🍂" }
+      ]
+    },
+    "midwest_us": {
+      "label": "Midwestern US",
+      "trees": [
+        { "name": "Bur Oak", "scientific": "Quercus macrocarpa", "fun_fact": "Its thick bark makes it the most fire-resistant oak in North America.", "emoji": "🌳" },
+        { "name": "Eastern Cottonwood", "scientific": "Populus deltoides", "fun_fact": "One of the fastest-growing trees in North America — up to 6 feet per year.", "emoji": "🌿" },
+        { "name": "Shagbark Hickory", "scientific": "Carya ovata", "fun_fact": "Its nuts were a primary food source for Native Americans for thousands of years.", "emoji": "🥜" },
+        { "name": "Black Walnut", "scientific": "Juglans nigra", "fun_fact": "Produces juglone, a chemical that kills many nearby plants.", "emoji": "🌰" },
+        { "name": "American Elm", "scientific": "Ulmus americana", "fun_fact": "Once lined nearly every Main Street in America before Dutch Elm Disease.", "emoji": "🌳" }
+      ]
+    },
+    "southwest_us": {
+      "label": "Southwestern US",
+      "trees": [
+        { "name": "Joshua Tree", "scientific": "Yucca brevifolia", "fun_fact": "Not actually a tree — it's a giant member of the asparagus family.", "emoji": "🌵" },
+        { "name": "Palo Verde", "scientific": "Parkinsonia florida", "fun_fact": "Its green bark photosynthesizes even after dropping its leaves.", "emoji": "💚" },
+        { "name": "Arizona Sycamore", "scientific": "Platanus wrightii", "fun_fact": "Found only near desert streams — a true oasis indicator.", "emoji": "🌳" },
+        { "name": "Mesquite", "scientific": "Prosopis glandulosa", "fun_fact": "Its roots can extend over 150 feet deep to find water.", "emoji": "🏜️" },
+        { "name": "Pinyon Pine", "scientific": "Pinus edulis", "fun_fact": "Its edible pine nuts have been harvested by humans for over 10,000 years.", "emoji": "🌲" }
+      ]
+    },
+    "northwest_us": {
+      "label": "Northwestern US",
+      "trees": [
+        { "name": "Douglas Fir", "scientific": "Pseudotsuga menziesii", "fun_fact": "Not a true fir — it has its own genus. The cones have mouse-tail bracts.", "emoji": "🌲" },
+        { "name": "Western Red Cedar", "scientific": "Thuja plicata", "fun_fact": "Called the 'Tree of Life' by Pacific Northwest tribes for its many uses.", "emoji": "🌲" },
+        { "name": "Sitka Spruce", "scientific": "Picea sitchensis", "fun_fact": "Its lightweight, strong wood was used to build WWII aircraft.", "emoji": "✈️" },
+        { "name": "Bigleaf Maple", "scientific": "Acer macrophyllum", "fun_fact": "Its leaves can be over a foot wide — the largest of any maple.", "emoji": "🍁" },
+        { "name": "Pacific Madrone", "scientific": "Arbutus menziesii", "fun_fact": "Sheds its bark to reveal smooth, red-orange wood underneath.", "emoji": "🔴" }
+      ]
+    },
+    "california": {
+      "label": "California",
+      "trees": [
+        { "name": "Coast Redwood", "scientific": "Sequoia sempervirens", "fun_fact": "The tallest living organism on Earth at 380+ feet.", "emoji": "🌲" },
+        { "name": "Giant Sequoia", "scientific": "Sequoiadendron giganteum", "fun_fact": "The most massive single organism ever known — General Sherman weighs ~2.7M lbs.", "emoji": "🏔️" },
+        { "name": "Valley Oak", "scientific": "Quercus lobata", "fun_fact": "The largest North American oak, with canopies spreading over 100 feet.", "emoji": "🌳" },
+        { "name": "Monterey Cypress", "scientific": "Hesperocyparis macrocarpa", "fun_fact": "Naturally occurs in only two groves on the Monterey Peninsula.", "emoji": "🌊" },
+        { "name": "California Fan Palm", "scientific": "Washingtonia filifera", "fun_fact": "The only palm native to the western US — found in desert oases.", "emoji": "🌴" }
+      ]
+    },
+    "europe_west": {
+      "label": "Western Europe",
+      "trees": [
+        { "name": "English Oak", "scientific": "Quercus robur", "fun_fact": "The Royal Navy was nicknamed 'The Wooden Walls' because ships were built from these.", "emoji": "⚓" },
+        { "name": "European Beech", "scientific": "Fagus sylvatica", "fun_fact": "The word 'book' comes from the Old English 'bōc' meaning beech.", "emoji": "📖" },
+        { "name": "Scots Pine", "scientific": "Pinus sylvestris", "fun_fact": "The most widely distributed pine species in the world.", "emoji": "🌲" },
+        { "name": "Silver Birch", "scientific": "Betula pendula", "fun_fact": "A pioneer species — one of the first trees to colonize open ground.", "emoji": "🌿" },
+        { "name": "Horse Chestnut", "scientific": "Aesculus hippocastanum", "fun_fact": "Kids in the UK play 'conkers' by swinging its seeds on strings.", "emoji": "🌰" }
+      ]
+    },
+    "tropics": {
+      "label": "Tropical Regions",
+      "trees": [
+        { "name": "Banyan Tree", "scientific": "Ficus benghalensis", "fun_fact": "A single tree in India covers over 5 acres with its aerial roots.", "emoji": "🌳" },
+        { "name": "Coconut Palm", "scientific": "Cocos nucifera", "fun_fact": "Coconuts can float for months and germinate after washing ashore.", "emoji": "🥥" },
+        { "name": "Kapok", "scientific": "Ceiba pentandra", "fun_fact": "Maya believed it connected the underworld, earth, and heavens.", "emoji": "🌳" },
+        { "name": "Teak", "scientific": "Tectona grandis", "fun_fact": "Contains natural oils that make it nearly impervious to rot and termites.", "emoji": "🪵" },
+        { "name": "Royal Poinciana", "scientific": "Delonix regia", "fun_fact": "Called 'flamboyant' — its red flowers make it one of the most colorful trees on Earth.", "emoji": "🔥" }
+      ]
+    },
+    "default": {
+      "label": "Global Favorites",
+      "trees": [
+        { "name": "Ginkgo", "scientific": "Ginkgo biloba", "fun_fact": "A living fossil — unchanged for 200 million years. Survived the dinosaurs.", "emoji": "🦕" },
+        { "name": "Japanese Cherry", "scientific": "Prunus serrulata", "fun_fact": "Hanami, the tradition of viewing cherry blossoms, dates back over 1,000 years.", "emoji": "🌸" },
+        { "name": "Baobab", "scientific": "Adansonia digitata", "fun_fact": "Can store up to 32,000 gallons of water in its trunk.", "emoji": "💧" },
+        { "name": "Rainbow Eucalyptus", "scientific": "Eucalyptus deglupta", "fun_fact": "Its bark peels in strips to reveal neon green, blue, orange, and maroon wood.", "emoji": "🌈" },
+        { "name": "Dragon Blood Tree", "scientific": "Dracaena cinnabari", "fun_fact": "Bleeds red resin used as dye, medicine, and varnish for 2,000+ years.", "emoji": "🐉" }
+      ]
+    }
+  }
+}

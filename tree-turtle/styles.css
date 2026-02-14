@@ -1,0 +1,563 @@
+/* =====================================================
+   TreeTurtle — Gen Z energy CSS
+   ===================================================== */
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg:       #050508;
+  --bg-1:     #0a0a12;
+  --bg-2:     #111120;
+  --surf:     #18182e;
+  --surf-2:   #222244;
+  --brd:      #2c2c50;
+  --brd-hi:   #3e3e6e;
+  --text:     #ededf5;
+  --text-2:   #a5a5c0;
+  --text-3:   #6b6b8e;
+  --lime:     #b8f53d;
+  --lime-d:   rgba(184,245,61,.12);
+  --lime-g:   rgba(184,245,61,.3);
+  --purple:   #a855f7;
+  --purple-d: rgba(168,85,247,.1);
+  --purple-g: rgba(168,85,247,.3);
+  --pink:     #f472b6;
+  --pink-d:   rgba(244,114,182,.08);
+  --teal:     #2dd4bf;
+  --orange:   #fb923c;
+  --r:  16px;
+  --rs: 10px;
+  --font:  'Space Grotesk', -apple-system, sans-serif;
+  --display: 'Syne', 'Space Grotesk', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+  --ease: cubic-bezier(.4,0,.2,1);
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── Film grain ────────────────────────────────── */
+.grain {
+  position: fixed; inset: 0; z-index: 9999;
+  pointer-events: none;
+  opacity: .035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px;
+}
+
+/* =====================================================
+   HERO
+   ===================================================== */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+/* Floating orbs */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  animation: orbFloat 8s ease-in-out infinite alternate;
+}
+.orb-1 {
+  width: 420px; height: 420px;
+  background: var(--lime-d);
+  top: -10%; left: -8%;
+}
+.orb-2 {
+  width: 350px; height: 350px;
+  background: var(--purple-d);
+  bottom: -5%; right: -5%;
+  animation-delay: 3s;
+}
+.orb-3 {
+  width: 200px; height: 200px;
+  background: var(--pink-d);
+  top: 40%; left: 55%;
+  animation-delay: 5s;
+}
+@keyframes orbFloat {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(30px, -40px) scale(1.1); }
+}
+
+.hero-inner { position: relative; z-index: 1; max-width: 600px; }
+
+.eyebrow {
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--lime);
+  margin-bottom: 18px;
+}
+
+.title {
+  font-family: var(--display);
+  font-size: clamp(3.6rem, 10vw, 6.5rem);
+  font-weight: 800;
+  letter-spacing: -.05em;
+  line-height: .95;
+  margin-bottom: 18px;
+}
+.w-tree {
+  background: linear-gradient(135deg, var(--lime), var(--teal));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.w-turtle {
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--text-2);
+  line-height: 1.65;
+  margin-bottom: 36px;
+}
+
+/* CTA button */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 36px;
+  background: var(--lime);
+  color: #000;
+  border: none;
+  border-radius: 999px;
+  font-family: var(--font);
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .25s var(--ease);
+  box-shadow: 0 0 40px var(--lime-g), 0 0 80px var(--lime-d);
+}
+.btn-cta:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 0 60px var(--lime-g), 0 0 120px var(--lime-d);
+}
+.btn-cta:active { transform: scale(.97); }
+
+.arrow {
+  display: inline-block;
+  transition: transform .2s;
+}
+.btn-cta:hover .arrow { transform: translateX(4px); }
+
+.hint {
+  margin-top: 16px;
+  font-size: .78rem;
+  color: var(--text-3);
+}
+.hint.error { color: var(--pink); }
+
+.scroll-hint {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: .72rem;
+  letter-spacing: .08em;
+  color: var(--text-3);
+  animation: nudge 2s ease-in-out infinite;
+}
+@keyframes nudge {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%      { transform: translateX(-50%) translateY(6px); }
+}
+
+/* =====================================================
+   APP / MAIN CONTENT
+   ===================================================== */
+.app {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+  animation: fadeUp .6s var(--ease);
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Location bar ────────────────────────────── */
+.loc-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 0 32px;
+  flex-wrap: wrap;
+}
+
+.loc-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  background: var(--surf);
+  border: 1px solid var(--brd);
+  border-radius: 999px;
+  font-size: .88rem;
+  color: var(--text-2);
+}
+.loc-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--text-3);
+  transition: all .3s;
+}
+.loc-dot.on {
+  background: var(--lime);
+  box-shadow: 0 0 10px var(--lime-g);
+}
+
+.btn-ghost {
+  padding: 7px 16px;
+  background: transparent;
+  color: var(--text-3);
+  border: 1px solid var(--brd);
+  border-radius: 999px;
+  font-family: var(--font);
+  font-size: .78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s;
+}
+.btn-ghost:hover { border-color: var(--purple); color: var(--purple); }
+
+/* ── Region picker overlay ───────────────────── */
+.picker-overlay {
+  position: fixed; inset: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(5,5,8,.85);
+  backdrop-filter: blur(12px);
+  animation: fadeIn .25s;
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.picker-card {
+  background: var(--bg-2);
+  border: 1px solid var(--brd);
+  border-radius: var(--r);
+  padding: 32px;
+  max-width: 500px;
+  width: 90%;
+}
+.picker-title {
+  font-family: var(--display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--lime);
+}
+.picker-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.picker-btn {
+  padding: 12px 14px;
+  background: var(--surf);
+  border: 1px solid var(--brd);
+  border-radius: var(--rs);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: .88rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: all .2s;
+}
+.picker-btn:hover {
+  border-color: var(--lime);
+  background: var(--surf-2);
+  transform: translateY(-2px);
+}
+.picker-close {
+  width: 100%;
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* ── Sections ────────────────────────────────── */
+.section {
+  margin-bottom: 48px;
+}
+.section-head {
+  margin-bottom: 20px;
+}
+.tag {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.tag.green  { background: var(--lime-d); color: var(--lime); border: 1px solid rgba(184,245,61,.2); }
+.tag.purple { background: var(--purple-d); color: var(--purple); border: 1px solid rgba(168,85,247,.2); }
+.section-sub { font-size: .9rem; color: var(--text-3); }
+
+/* ── Tree cards ──────────────────────────────── */
+.trees-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.tree-card {
+  background: var(--bg-2);
+  border: 1px solid var(--brd);
+  border-radius: var(--r);
+  padding: 24px;
+  transition: all .25s var(--ease);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+.tree-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--lime), var(--teal));
+  opacity: 0;
+  transition: opacity .25s;
+}
+.tree-card:hover {
+  border-color: var(--lime);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px var(--lime-d);
+}
+.tree-card:hover::before { opacity: 1; }
+
+.tree-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.tree-emoji {
+  font-size: 2rem;
+  line-height: 1;
+}
+.tree-name {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.tree-sci {
+  font-size: .8rem;
+  color: var(--text-3);
+  font-style: italic;
+  font-family: var(--mono);
+}
+.tree-fact {
+  font-size: .92rem;
+  color: var(--text-2);
+  line-height: 1.6;
+  margin-top: 6px;
+}
+.tree-fact-label {
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--lime);
+  margin-bottom: 4px;
+}
+
+/* ── Turtle fact cards ───────────────────────── */
+.facts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.fact-card {
+  background: linear-gradient(135deg, var(--purple-d), var(--pink-d));
+  border: 1px solid var(--brd);
+  border-left: 4px solid var(--purple);
+  border-radius: 0 var(--r) var(--r) 0;
+  padding: 20px 22px;
+  transition: all .25s var(--ease);
+  cursor: default;
+}
+.fact-card:hover {
+  border-left-color: var(--pink);
+  transform: translateX(6px);
+  box-shadow: -4px 0 24px var(--purple-d);
+}
+
+.fact-emoji {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+.fact-text {
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+.fact-cat {
+  display: inline-block;
+  padding: 2px 10px;
+  background: var(--surf);
+  border: 1px solid var(--brd);
+  border-radius: 4px;
+  font-size: .68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--text-3);
+}
+
+/* Shuffle button */
+.btn-shuffle {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 28px;
+  background: transparent;
+  color: var(--purple);
+  border: 1px solid var(--purple);
+  border-radius: 999px;
+  font-family: var(--font);
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s var(--ease);
+}
+.btn-shuffle:hover {
+  background: var(--purple);
+  color: #fff;
+  box-shadow: 0 0 30px var(--purple-g);
+  transform: translateY(-2px);
+}
+
+/* ── Outro ───────────────────────────────────── */
+.outro {
+  text-align: center;
+  padding: 48px 0 0;
+}
+.outro-big {
+  font-family: var(--display);
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--lime), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+.outro-sm {
+  font-size: .95rem;
+  color: var(--text-3);
+}
+
+/* =====================================================
+   TICKER
+   ===================================================== */
+.ticker {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  padding: 10px 0;
+  background: var(--bg-1);
+  border-top: 1px solid var(--brd);
+  overflow: hidden;
+  z-index: 50;
+}
+.ticker-track {
+  display: flex;
+  gap: 56px;
+  white-space: nowrap;
+  animation: marquee 35s linear infinite;
+}
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ticker-track span {
+  flex-shrink: 0;
+  font-size: .76rem;
+  color: var(--text-3);
+  font-weight: 500;
+}
+
+/* =====================================================
+   TOAST
+   ===================================================== */
+.toast {
+  position: fixed;
+  bottom: 60px; left: 50%;
+  transform: translateX(-50%) translateY(40px);
+  background: var(--lime);
+  color: #000;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: .85rem;
+  opacity: 0;
+  transition: all .3s var(--ease);
+  z-index: 200;
+  pointer-events: none;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 600px) {
+  .title { font-size: 3.2rem; }
+  .subtitle { font-size: 1rem; }
+  .btn-cta { padding: 14px 28px; font-size: 1rem; }
+  .app { padding: 0 14px 100px; }
+  .tree-card { padding: 18px; }
+  .picker-grid { grid-template-columns: 1fr; }
+  .loc-bar { flex-direction: column; align-items: flex-start; }
+}
+
+/* ── Card entrance animations ────────────────── */
+.tree-card, .fact-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cardIn .5s var(--ease) forwards;
+}
+.tree-card:nth-child(1), .fact-card:nth-child(1) { animation-delay: .05s; }
+.tree-card:nth-child(2), .fact-card:nth-child(2) { animation-delay: .12s; }
+.tree-card:nth-child(3), .fact-card:nth-child(3) { animation-delay: .19s; }
+.tree-card:nth-child(4), .fact-card:nth-child(4) { animation-delay: .26s; }
+.tree-card:nth-child(5), .fact-card:nth-child(5) { animation-delay: .33s; }
+.fact-card:nth-child(6) { animation-delay: .4s; }
+.fact-card:nth-child(7) { animation-delay: .47s; }
+
+@keyframes cardIn {
+  to { opacity: 1; transform: translateY(0); }
+}

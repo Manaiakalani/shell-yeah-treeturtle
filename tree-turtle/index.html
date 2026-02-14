@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TreeTurtle 🐢🌳</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Grain overlay -->
+  <div class="grain"></div>
+
+  <!-- ====== HERO / LANDING ====== -->
+  <section class="hero" id="hero">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="hero-inner">
+      <p class="eyebrow">nature is lowkey fire</p>
+      <h1 class="title">
+        <span class="w-tree">Tree</span><span class="w-turtle">Turtle</span>
+      </h1>
+      <p class="subtitle">trees near you. turtle facts that slap.<br>that's it. that's the app.</p>
+
+      <button class="btn-cta" id="startBtn">
+        <span>find my trees</span>
+        <span class="arrow">→</span>
+      </button>
+      <p class="hint" id="hint">we'll ask for your location — it stays on device, no cap</p>
+    </div>
+
+    <div class="scroll-hint">scroll ↓</div>
+  </section>
+
+  <!-- ====== APP CONTENT ====== -->
+  <main class="app" id="app" style="display:none;">
+
+    <!-- Location pill -->
+    <div class="loc-bar">
+      <div class="loc-pill" id="locPill">
+        <span class="loc-dot" id="locDot"></span>
+        <span id="locText">detecting vibes…</span>
+      </div>
+      <button class="btn-ghost" id="changeRegionBtn">switch region</button>
+    </div>
+
+    <!-- Region picker overlay -->
+    <div class="picker-overlay" id="pickerOverlay" style="display:none;">
+      <div class="picker-card">
+        <h3 class="picker-title">pick your vibe</h3>
+        <div class="picker-grid" id="pickerGrid"></div>
+        <button class="btn-ghost picker-close" id="pickerClose">nvm close this</button>
+      </div>
+    </div>
+
+    <!-- TREES -->
+    <section class="section">
+      <div class="section-head">
+        <div class="tag green">🌳 local trees</div>
+        <p class="section-sub" id="treesSubtitle">loading…</p>
+      </div>
+      <div class="trees-grid" id="treesGrid"></div>
+    </section>
+
+    <!-- TURTLE FACTS -->
+    <section class="section">
+      <div class="section-head">
+        <div class="tag purple">🐢 turtle facts</div>
+        <p class="section-sub">these go stupidly hard</p>
+      </div>
+      <div class="facts-list" id="factsList"></div>
+      <button class="btn-shuffle" id="shuffleBtn">shuffle 🔀</button>
+    </section>
+
+    <!-- VIBE CHECK -->
+    <section class="outro">
+      <p class="outro-big">you just learned about nature.</p>
+      <p class="outro-sm">that's growth. be proud fr fr. 🌱</p>
+    </section>
+  </main>
+
+  <!-- Bottom ticker -->
+  <div class="ticker" id="ticker" style="display:none;">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

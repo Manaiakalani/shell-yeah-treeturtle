@@ -1,0 +1,11 @@
+{
+  "name": "prd-generator-app",
+  "version": "1.0.0",
+  "description": "Generate copy-paste PRDs with local trees + random turtle facts",
+  "scripts": {
+    "dev": "npx serve src -p 3000 --cors",
+    "start": "npx serve src -p 3000 --cors"
+  },
+  "keywords": ["prd", "trees", "turtles", "geolocation"],
+  "license": "MIT"
+}
