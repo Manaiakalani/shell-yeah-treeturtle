@@ -60,17 +60,27 @@ npx serve . -p 3001
 
 ### Run with Docker
 
-```bash
-# Build the image
-docker build -t treeturtle .
+#### Both apps (landing page + sub-apps)
 
-# Run on port 8080
+```bash
+# From the repo root
+docker build -t treeturtle .
 docker run -p 8080:80 treeturtle
 ```
 
 Then visit:
 - **PRD Generator** → [http://localhost:8080/prd-generator/](http://localhost:8080/prd-generator/)
 - **TreeTurtle Explorer** → [http://localhost:8080/explorer/](http://localhost:8080/explorer/)
+
+#### Explorer only
+
+```bash
+cd tree-turtle
+docker build -t treeturtle-explorer .
+docker run -p 8080:80 treeturtle-explorer
+```
+
+Then visit [http://localhost:8080](http://localhost:8080).
 
 ---
 
