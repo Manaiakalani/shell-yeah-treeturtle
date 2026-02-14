@@ -9,6 +9,9 @@ COPY prd-generator-app/src/ /usr/share/nginx/html/prd-generator/
 # Copy TreeTurtle Explorer app
 COPY tree-turtle/ /usr/share/nginx/html/explorer/
 
+# Copy robots.txt to nginx root (applies to all sub-apps)
+COPY robots.txt /usr/share/nginx/html/robots.txt
+
 # Create a landing page that links to both apps
 COPY <<'EOF' /usr/share/nginx/html/index.html
 <!DOCTYPE html>
