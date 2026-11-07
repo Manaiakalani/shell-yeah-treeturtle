@@ -1,8 +1,8 @@
-# 🐢🌳 TreeTurtle — Nature Hits Different
+# 🐢🌳 TreeTurtle: Nature Hits Different
 
 > **trees near you. turtle facts that slap. that's it. that's the repo.**
 
-Two web apps celebrating local trees and turtle facts — because nature is lowkey fire and you deserve to know what's growing outside your window (and that turtles can breathe through their butts).
+Two web apps celebrating local trees and turtle facts: because nature is lowkey fire and you deserve to know what's growing outside your window (and that turtles can breathe through their butts).
 
 ![Vanilla JS](https://img.shields.io/badge/vanilla-JS-F7DF1E?logo=javascript&logoColor=000)
 ![No Framework](https://img.shields.io/badge/framework-none_needed-22d68a)
@@ -24,13 +24,13 @@ A tool that generates **copy-paste-ready Product Requirements Documents** using 
 - 📍 Auto-detects your region via Browser Geolocation API
 - 🗺️ Manual region picker (9 regions worldwide)
 - 📋 One-click copy as Markdown or plain text
-- 🎚️ Configurable number of trees (1–5) and turtle facts (1–10)
+- 🎚️ Configurable number of trees (1-5) and turtle facts (1-10)
 - 🌙 Dark mode by default
 - 📱 Fully responsive
 
 ### 🐢 TreeTurtle Explorer (`tree-turtle/`)
 
-A Gen Z–styled nature explorer that surfaces local trees and turtle facts in a visually stunning interface. No PRD generation — just pure vibes.
+A Gen Z-styled nature explorer that surfaces local trees and turtle facts in a visually stunning interface. No PRD generation: just pure vibes.
 
 **Features:**
 - 🎨 Animated orbs, film grain overlay, and card entrance animations
@@ -126,7 +126,7 @@ Then visit [http://localhost:8080](http://localhost:8080).
 
 ## Data
 
-### 🌳 Trees — 9 Regions, 45 Species
+### 🌳 Trees: 9 Regions, 45 Species
 
 | Region | Example Species |
 |--------|----------------|
@@ -140,11 +140,11 @@ Then visit [http://localhost:8080](http://localhost:8080).
 | Tropical Regions | Banyan Tree, Coconut Palm, Kapok |
 | Global Favorites | Ginkgo, Baobab, Rainbow Eucalyptus |
 
-### 🐢 Turtle Facts — 30 Facts, 10 Categories
+### 🐢 Turtle Facts: 30 Facts, 10 Categories
 
 Categories: `anatomy` · `ability` · `biology` · `history` · `trivia` · `longevity` · `geography` · `conservation` · `culture`
 
-> _"Some turtles can breathe through their butts. Seriously. It's called cloacal respiration."_ — this app
+> _"Some turtles can breathe through their butts. Seriously. It's called cloacal respiration."_: this app
 
 ---
 
@@ -155,7 +155,7 @@ Categories: `anatomy` · `ability` · `biology` · `history` · `trivia` · `lon
 | Frontend | Vanilla HTML / CSS / JavaScript (ES Modules) |
 | Geolocation | Browser Geolocation API |
 | Clipboard | Clipboard API with `execCommand` fallback |
-| Data | Static JSON — no API calls, fully offline |
+| Data | Static JSON: no API calls, fully offline |
 | Fonts | Inter, Space Grotesk, Syne, JetBrains Mono (Google Fonts) |
 | Serving | Any static file server / nginx (Docker) |
 
@@ -187,4 +187,4 @@ PRs welcome! Some ideas:
 
 ## License
 
-MIT — do whatever you want, just don't harm any turtles. 🐢✨
+MIT: do whatever you want, just don't harm any turtles. 🐢✨
